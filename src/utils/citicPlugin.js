@@ -84,15 +84,7 @@ class citicPlugin {
         Vue.prototype.$post = httpRequest.post;
         Vue.prototype.$put = httpRequest.put;
         Vue.prototype.$delete = httpRequest.del;
-
-        Vue.prototype.$Base64 = Base64;
-
-        Vue.prototype.$API_ENUM = apiEnum;
         Vue.prototype.$CONFIG = config;
-        Vue.prototype.$ERROR_CODE = errorCode;
-
-        //定义全局事件
-        Vue.prototype.$EVENTS = {};
 
         /**
          * 动态设置页面title
@@ -138,12 +130,14 @@ class citicPlugin {
                 }
                 window.__directiveFloatBottom__ = { el, standardEl, offset };
                 window.addEventListener("scroll", _handleBottomFloat);
+                document.addEventListener('DOMSubtreeModified', _handleBottomFloat, false);
                 setTimeout(_handleBottomFloat, 0);
             },
 
             unbind(el, binding, vnode) {
                 delete window.__directiveFloatBottom__;
                 window.removeEventListener("scroll", _handleBottomFloat);
+                document.removeEventListener('DOMSubtreeModified', _handleBottomFloat);
             }
         })
     }
