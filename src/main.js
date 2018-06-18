@@ -7,15 +7,13 @@ import router from './router'
 Vue.config.productionTip = false
 
 import './assets/reset.scss'
-import citicPlug from './utils/citicPlugin';
-import vueBroadcastPlugin from './utils/vueBroadcastPlugin';
-Vue.use(citicPlug);
-Vue.use(vueBroadcastPlugin);
+import vuePlugin from './utils/vuePlugin';
+Vue.use(vuePlugin, {baseWidth: 375});
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+    el: '#app',
+    router,
+    components: {App},
+    template: '<App/>'
 })
