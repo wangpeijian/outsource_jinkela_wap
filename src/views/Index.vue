@@ -41,7 +41,6 @@
                 display: inline-block;
                 height: .22rem;
                 width: .61rem;
-                background: url("../../static/img/logo.png") center no-repeat;
                 background-size: contain;
                 position: absolute;
                 top: .14rem;
@@ -136,54 +135,6 @@
 
         .recommend {
             height: 7.45rem;
-            /*position: relative;*/
-            /*overflow: hidden;*/
-
-          /*  .circle {
-                display: inline-block;
-                position: absolute;
-                border-radius: 50%;
-
-                &.circle-1 {
-                    top: 0.358rem;
-                    left: -1.792rem;
-                    width: 5.004rem;
-                    height: 5.004rem;
-                    z-index: 1;
-                }
-
-                &.circle-2 {
-                    top: 1.284rem;
-                    left: 1.284rem;
-                    width: 3.672rem;
-                    height: 3.672rem;
-                    z-index: 1;
-                }
-
-                &.circle-3 {
-                    top: 2.5775rem;
-                    left: -0.7425rem;
-                    width: 5.235rem;
-                    height: 5.235rem;
-                    z-index: 3;
-                }
-
-                &.circle-4 {
-                    top: 5.05rem;
-                    left: 0.9rem;
-                    width: 4.41rem;
-                    height: 4.41rem;
-                    z-index: 1;
-                }
-
-                &.circle-5 {
-                    top: 5.34rem;
-                    left: -2.07rem;
-                    width: 5.56rem;
-                    height: 5.56rem;
-                    z-index: 2;
-                }
-            }*/
 
             .title{
                 line-height: 1.2rem;
@@ -489,7 +440,6 @@
                             left: 0;
                             width: 130px;
                             height: 187px;
-                            background-image: url("../../static/img/target6.png");
                             animation: target6 $timerWave infinite linear;
                             transform: scale(1, 1);
 
@@ -507,12 +457,10 @@
                                 }
                                 67% {
                                     opacity: 1;
-                                    background-image: url("../../static/img/target6Active.png");
                                     transform: scale(1.5, 1.5);
                                 }
                                 100% {
                                     opacity: 1;
-                                    background-image: url("../../static/img/target6Active.png");
                                     transform: scale(1.5, 1.5);
                                 }
                             }
@@ -563,7 +511,6 @@
                         top: 200px;
                         width: 270px;
                         height: 270px;
-                        background-image: url("../../static/img/radarLogo.png");
                     }
 
                     .left-card {
@@ -572,7 +519,6 @@
                         top: 400px;
                         width: 344px;
                         height: 226px;
-                        background-image: url("../../static/img/card1.png");
 
                         transform: translateX(0%);
                         animation: card1 $timerCard infinite linear alternate;
@@ -598,7 +544,6 @@
                         top: 250px;
                         width: 134px;
                         height: 143px;
-                        background-image: url("../../static/img/target6.png");
                     }
 
                     .right-card {
@@ -607,7 +552,6 @@
                         top: 100px;
                         width: 344px;
                         height: 226px;
-                        background-image: url("../../static/img/card2.png");
 
                         transform: translateX(0%);
                         animation: card2 $timerCard infinite linear alternate;
@@ -671,7 +615,6 @@
                         top: 200px;
                         width: 270px;
                         height: 270px;
-                        background-image: url("../../static/img/radarLogo.png");
                     }
 
                     .right-people {
@@ -680,7 +623,6 @@
                         top: 250px;
                         width: 134px;
                         height: 143px;
-                        background-image: url("../../static/img/target6.png");
                     }
 
                     .talk {
@@ -697,7 +639,6 @@
                         }
 
                         &.talk-1 {
-                            background-image: url("../../static/img/talk1.png");
                             height: 110px;
                             width: 570px;
                             top: 45px;
@@ -724,7 +665,6 @@
                         }
 
                         &.talk-2 {
-                            background-image: url("../../static/img/talk2.png");
                             height: 147px;
                             width: 647px;
                             top: 150px;
@@ -751,7 +691,6 @@
                         }
 
                         &.talk-3 {
-                            background-image: url("../../static/img/talk3.png");
                             height: 110px;
                             width: 423px;
                             top: 285px;
@@ -778,7 +717,6 @@
                         }
 
                         &.talk-4 {
-                            background-image: url("../../static/img/talk4.png");
                             height: 228px;
                             width: 647px;
                             top: 385px;
@@ -805,7 +743,6 @@
                         }
 
                         &.talk-5 {
-                            background-image: url("../../static/img/talk5.png");
                             height: 110px;
                             width: 306px;
                             top: 600px;
@@ -905,7 +842,6 @@
                         top: 350px;
                         width: 134px;
                         height: 143px;
-                        background-image: url("../../static/img/target6.png");
 
                         animation: peopleTime $timerNetwork infinite linear;
 
@@ -1107,7 +1043,6 @@
                 }
 
                 .input {
-                    background: url("../../static/img/input.png") center no-repeat;
                     background-size: contain;
                     position: absolute;
                     bottom: .3rem;
@@ -1173,7 +1108,7 @@
 <template>
     <div class="home" id="homeTop">
         <header class="header">
-            <span class="logo"></span>
+            <span class="logo bg" :style="{'background-image': `url(${logo})`}"></span>
             <span class="item"><a href="#recommend">项目</a></span>
             <span class="item"><a href="#institution">资金</a></span>
             <span class="item"><a href="#capital">人脉</a></span>
@@ -1229,7 +1164,7 @@
         </div>
 
         <div class="institution" id="institution">
-            <h3 class="title bg">机构信息</h3><!-- :style="{'background-image': `url(${companyBg})`}"-->
+            <h3 class="title bg">机构信息</h3>
 
             <img class="panel" :src="copy1">
             <img class="panel" :src="copy1">
@@ -1248,36 +1183,36 @@
                     <div class="target target-3 bg" :style="{'background-image': `url(${target3})`}"></div>
                     <div class="target target-4 bg" :style="{'background-image': `url(${target4})`}"></div>
                     <div class="target target-5 bg" :style="{'background-image': `url(${target5})`}"></div>
-                    <div class="target target-6 bg"></div>  <!--:style="{'background-image': `url(${target6})`}"-->
+                    <div class="target target-6 bg" :style="{'background-image': `url(${target6})`}"></div>
 
                     <div class="radar-wave bg" :style="{'background-image': `url(${radarWave})`}"></div>
                     <div class="radar-logo bg" :style="{'background-image': `url(${radarLogo})`}"></div>
                 </div>
 
                 <div class="card-panel">
-                    <span class="left-people bg"></span>
-                    <span class="left-card bg"></span>
+                    <span class="left-people bg" :style="{'background-image': `url(${radarLogo})`}"></span>
+                    <span class="left-card bg" :style="{'background-image': `url(${card1})`}"></span>
 
-                    <span class="right-people bg"></span>
-                    <span class="right-card bg"></span>
+                    <span class="right-people bg" :style="{'background-image': `url(${target6})`}"></span>
+                    <span class="right-card bg" :style="{'background-image': `url(${card2})`}">></span>
                 </div>
 
                 <div class="talk-panel">
-                    <span class="left-people bg"></span>
+                    <span class="left-people bg" :style="{'background-image': `url(${radarLogo})`}"></span>
 
-                    <span class="talk left talk-1  bg"></span>
-                    <span class="talk right talk-2 bg"></span>
-                    <span class="talk left talk-3  bg"></span>
-                    <span class="talk right talk-4 bg"></span>
-                    <span class="talk left talk-5 bg"></span>
+                    <span class="talk left talk-1  bg" :style="{'background-image': `url(${talk1})`}"></span>
+                    <span class="talk right talk-2 bg" :style="{'background-image': `url(${talk2})`}"></span>
+                    <span class="talk left talk-3  bg" :style="{'background-image': `url(${talk3})`}"></span>
+                    <span class="talk right talk-4 bg" :style="{'background-image': `url(${talk4})`}"></span>
+                    <span class="talk left talk-5 bg" :style="{'background-image': `url(${talk5})`}"></span>
 
-                    <span class="right-people bg"></span>
+                    <span class="right-people bg" :style="{'background-image': `url(${target6})`}"></span>
                 </div>
 
                 <div class="network-panel">
                     <span class="network bg" :style="{'background-image': `url(${network})`}"></span>
                     <span class="line"></span>
-                    <span class="people bg"></span>
+                    <span class="people bg" :style="{'background-image': `url(${target6})`}"></span>
                 </div>
             </div>
         </div>
@@ -1291,7 +1226,7 @@
                 <div class="dialog d-3 bg" :class="{'fixed-mark': dFixed}" :style="{'background-image': `url(${review3})`}"></div>
                 <div class="dialog d-4 bg" :class="{'fixed-mark': dFixed}" :style="{'background-image': `url(${review4})`}"></div>
 
-                <div class="input"></div>
+                <div class="input bg" :style="{'background-image': `url(${input})`}"></div>
             </div>
         </div>
 
@@ -1313,7 +1248,7 @@
            <img class="item" :src="partner15">
         </div>
 
-        <footer class="footer bg" ><!--:style="{'background-image': `url(${footerBg})`}"-->
+        <footer class="footer bg">
 
             <img class="qrcode" :src="weixin">
             <label class="label">金客拉公众号</label>
@@ -1331,24 +1266,15 @@
 </template>
 
 <script>
-    // import recommendBg from '../../static/img/recommendBg.jpg';
     import Phone from '../../static/img/Phone.png';
     import problem from '../../static/img/problem.jpg';
 
-   /* import Oval1 from '../../static/img/Oval1.png';
-    import Oval2 from '../../static/img/Oval2.png';
-    import Oval3 from '../../static/img/Oval3.png';
-    import Oval4 from '../../static/img/Oval4.png';
-    import Oval5 from '../../static/img/Oval5.png';*/
-
-    // import companyBg from '../../static/img/companyBg.png';
 
     import copy1 from '../../static/img/copy1.png';
     import copy2 from '../../static/img/copy2.png';
     import copy3 from '../../static/img/copy3.png';
     import copy4 from '../../static/img/copy4.png';
 
-    // import footerBg from '../../static/img/footerBg.png';
 
     import weixin from '../../static/img/qrcode-weixin.jpg';
     import xiaochengxu from '../../static/img/qrcode-xiaochengxu.jpg';
@@ -1390,28 +1316,29 @@
     import radarMin from '../../static/img/radarMin.png';
     import radarWave from '../../static/img/radarWave.png';
 
+    import logo from '../../static/img/logo.png';
+    import talk1 from '../../static/img/talk1.png';
+    import talk2 from '../../static/img/talk2.png';
+    import talk3 from '../../static/img/talk3.png';
+    import talk4 from '../../static/img/talk4.png';
+    import talk5 from '../../static/img/talk5.png';
+
+    import card1 from "../../static/img/card1.png"
+    import card2 from "../../static/img/card2.png"
+    import input from "../../static/img/input.png"
+
     export default {
         data() {
             return {
                 phonex,
-                // recommendBg,
                 Phone,
                 problem,
 
-                // Oval1,
-                // Oval2,
-                // Oval3,
-                // Oval4,
-                // Oval5,
-
-                // companyBg,
 
                 copy1,
                 copy2,
                 copy3,
                 copy4,
-
-                // footerBg,
 
                 weixin,
                 xiaochengxu,
@@ -1451,6 +1378,16 @@
                 radarBig,
                 radarMin,
                 radarWave,
+
+                card1,
+                card2,
+                logo,
+                input,
+                talk1,
+                talk2,
+                talk3,
+                talk4,
+                talk5,
             };
         },
 
