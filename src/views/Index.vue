@@ -1267,7 +1267,7 @@
 
 <script>
     import Phone from '../../static/img/Phone.png';
-    import problem from '../../static/img/problem.jpg';
+    import problem from '../../static/img/problem.png';
 
 
     import copy1 from '../../static/img/copy1.png';
@@ -1276,8 +1276,8 @@
     import copy4 from '../../static/img/copy4.png';
 
 
-    import weixin from '../../static/img/qrcode-weixin.jpg';
-    import xiaochengxu from '../../static/img/qrcode-xiaochengxu.jpg';
+    import weixin from '../../static/img/qrcode-weixin.png';
+    import xiaochengxu from '../../static/img/qrcode-xiaochengxu.png';
 
     import partner1 from '../../static/img/partner1.png';
     import partner2 from '../../static/img/partner2.png';
