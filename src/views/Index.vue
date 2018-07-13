@@ -1267,7 +1267,7 @@
 
 <script>
     import Phone from '../../static/img/Phone.png';
-    import problem from '../../static/img/problem.png';
+    import problem from '../../static/img/problem.jpg';
 
 
     import copy1 from '../../static/img/copy1.png';
